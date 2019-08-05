@@ -6,7 +6,8 @@ public class TesteBanco{
         ContaPaulo.setTitular(ClientePaulo);
 
         System.out.println(ContaPaulo.getTitular().getNome());
-    
+        System.out.println(ContaPaulo.getTitular().getNome());
+        
         
 
 
