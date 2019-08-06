@@ -26,12 +26,13 @@ class Conta {
 
     public boolean transfere(double valor, Conta destino){
         if(valor <= saldo){
-            saldo -= valor;
+            saca(valor);
             destino.deposita(valor);
             return true;
-        } 
-        return false;
-    }
+        }else{
+            return false;}
+        }
+       
     public double getSaldo(){
         return saldo; 
     }
