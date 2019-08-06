@@ -11,3 +11,5 @@ bin/Funcionarios/Gerente.class
 bin/Funcionarios/TesteFuncionarios.class
 bin/Funcionarios/TesteGerente.class
 bin/Funcionarios/TesteReferencias.class
+bin/Funcionarios/FuncionarioAutenticavel.class
+bin/Funcionarios/Administrador.class
