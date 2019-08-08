@@ -1,20 +1,22 @@
 package Employees;
 public class Manager extends employee implements Authenticable{
 
-    private int password; 
+
+    private UsefulAuthentication authenticator; 
+
+    public Manager(){
+        this.authenticator = new UsefulAuthentication();
+    }
 
     @Override
     public void setPassword(int password) {
-        this.password = password;
+        this.authenticator.setPassword(password);
     }
 
     @Override
     public boolean authenticate(int password) {
-            if(this.password == 222){
-                return true;
-            }else{
-                return false;
-            }
+        boolean authenticated = this.authenticator.authenticate(password);
+        return authenticated;    
     }
 
     @Override

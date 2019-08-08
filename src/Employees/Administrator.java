@@ -5,7 +5,7 @@ public class Administrator extends employee implements Authenticable{
     private UsefulAuthentication authenticator; 
 
     public Administrator(){
-        this.authenticator = new UsefulAuthentication()
+        this.authenticator = new UsefulAuthentication();
     }
 
     @Override
@@ -18,7 +18,6 @@ public class Administrator extends employee implements Authenticable{
         boolean authenticated = this.authenticator.authenticate(password);
         return authenticated;    
     }
-
 
 
     @Override
