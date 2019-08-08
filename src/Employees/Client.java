@@ -1,21 +1,23 @@
 package Employees;
 
 public class Client implements Authenticable{
-    private int password; 
+    
+    private UsefulAuthentication Authenticator;
+
+    public Client() {
+        this.Authenticator = new UsefulAuthentication();
+
+    }
 
     
     @Override
     public void setPassword(int password) {
-        this.password = password;
+        this.Authenticator.setPassword(password);
     }
 
     @Override
     public boolean authenticate(int password) {
-            if(this.password == 222){
-                return true;
-            }else{
-                return false;
-            }
-    
+        boolean authenticated = this.Authenticator.authenticate(password);
+        return authenticated;    
     }
 }
