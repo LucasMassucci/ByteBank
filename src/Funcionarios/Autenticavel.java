@@ -1,21 +1,11 @@
 package Funcionarios;
 
-public abstract class FuncionarioAutenticavel extends Funcionario {
+public abstract interface Autenticavel {
 
-    private int senha;
 
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
+    public abstract void setSenha(int senha);
 
     
-    public boolean autentica(int senha){
-        if(this.senha == 222){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
+    public abstract boolean autentica(int senha);
 }
 

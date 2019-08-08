@@ -1,38 +1,21 @@
-public class Cliente {
-    private String nome;
-    private String cpf;
-    private String profissao;
-    private double renda;
+package Funcionarios;
 
-    public void setNome(String nome) {
-        this.nome = nome;
+public class ClienteTst implements Autenticavel{
+    private int senha; 
+
+    
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setProfissao(String profissao) {
-        this.profissao = profissao;
-    }
-
-    public String getProfissao() {
-        return profissao;
-    }
-
-    public void setRenda(double renda) {
-        this.renda = renda;
-    }
-
-    public double getRenda() {
-        return renda;
+    @Override
+    public boolean autentica(int senha) {
+            if(this.senha == 222){
+                return true;
+            }else{
+                return false;
+            }
+    
     }
 }
